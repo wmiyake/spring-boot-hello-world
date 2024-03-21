@@ -64,8 +64,6 @@ public class GetTimestamp {
 
     public static void main(String[] args) {
     	GetTimestamp app2= new GetTimestamp();
-    	//app2.read("C:\\Users\\TEJENDRARANA\\Downloads\\spring-boot-hello-world\\spring-boot-hello-world\\src\\main\\resources\\application2.properties");
-    	//app2.read("/spring-boot-hello-world/src/main/resources/application2.properties");
     }
 
 }
