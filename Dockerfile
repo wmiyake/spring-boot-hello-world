@@ -5,7 +5,7 @@ USER root
 COPY src /home/app/src
 COPY pom.xml /home/app
 
-RUN dnf install -y maven
+RUN microdnf install -y maven
 
 #ERROR
 #RUN nocmd
