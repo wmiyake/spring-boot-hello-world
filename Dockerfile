@@ -5,7 +5,7 @@ USER root
 COPY src /home/app/src
 COPY pom.xml /home/app
 
-RUN yum install -y maven
+RUN dnf install -y maven
 
 #ERROR
 #RUN nocmd
