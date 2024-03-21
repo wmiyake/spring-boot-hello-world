@@ -12,10 +12,8 @@ public class GetTimestamp {
 	private static String timestamp_file;
 	
 	static {
-		System.out.println("--------------GETING timestamp_file");
+		System.out.println("--------------OBTENDO timestamp_file");
 		try {
-			//File f = ResourceUtils.getFile("classpath:application.properties");
-			//InputStream f1 = new FileInputStream(f);
 			InputStream f1 = GetTimestamp.class.getClassLoader().getResourceAsStream("application.properties");
 	        Properties prop = new Properties();
 	        prop.load(f1);
@@ -38,7 +36,7 @@ public class GetTimestamp {
             timestamp = prop.getProperty("timestamp");
 
         } catch (IOException ex) {
-        	System.out.println("Issue in reading file --> "+timestamp_file);
+        	System.out.println("Problema na leitura do arquivo --> "+timestamp_file);
         	timestamp = "NONE";
         }
 				
@@ -55,17 +53,15 @@ public class GetTimestamp {
 
             prop.store(output, null);
 
-            System.out.println("Latest timestamp  "+timestamp+" set to file");
+            System.out.println("Mais Recente timestamp  "+timestamp+" definir como arquivo");
 
         } catch (IOException io) {
-        	System.out.println("Issue in writing file --> "+timestamp_file);
+        	System.out.println("Problema ao gravar arquivo --> "+timestamp_file);
         }
 	}
 
     public static void main(String[] args) {
     	GetTimestamp app2= new GetTimestamp();
-    	//app2.read("C:\\Users\\TEJENDRARANA\\Downloads\\spring-boot-hello-world\\spring-boot-hello-world\\src\\main\\resources\\application2.properties");
-    	//app2.read("/spring-boot-hello-world/src/main/resources/application2.properties");
     }
 
 }

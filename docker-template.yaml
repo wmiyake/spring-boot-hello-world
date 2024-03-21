@@ -153,4 +153,4 @@ parameters:
 - name: BRANCH_NAME
   displayName: Branch Name
   required: true 
-  value: master
+  value: main
