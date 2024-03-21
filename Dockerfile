@@ -1,4 +1,4 @@
-FROM quay.io/eclipse/che-java8-maven:nightly
+FROM registry.access.redhat.com/ubi8/openjdk-11
 
 MAINTAINER tech-tejendra
 
@@ -6,6 +6,8 @@ USER root
 
 COPY src /home/app/src
 COPY pom.xml /home/app
+
+RUN yum install -y maven
 
 #ERROR
 #RUN nocmd
