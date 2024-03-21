@@ -1,7 +1,5 @@
 FROM registry.access.redhat.com/ubi8/openjdk-11
 
-MAINTAINER tech-tejendra
-
 USER root
 
 COPY src /home/app/src
